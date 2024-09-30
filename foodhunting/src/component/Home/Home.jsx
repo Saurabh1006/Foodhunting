@@ -7,6 +7,7 @@ const Home = () => {
     <div>
       <div  className=' flex flex-col'>
       <Header/>
+      hello
       <ResturantList/>
       <Footer/>
       </div>
