@@ -10,11 +10,12 @@ import {
     ShoppingBagIcon,
 } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
-
+import { useNavigate, Navigate } from 'react-router-dom';
 const Index = () => {
+    const navigate = useNavigate();
     const handleLoginClick = () => {
         // Add your login logic here
-        loginWithRedirect();
+       navigate('/login')
     };
 
     return (
