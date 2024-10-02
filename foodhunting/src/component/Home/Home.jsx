@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className='flex flex-col min-h-screen'> {/* Ensure full height to allow scrolling */}
       <Header  className=" fixed top-0"/>
-      <main className='flex-grow'> {/* Main content area that can grow */}
+      <main className='flex-grow px-4'> {/* Main content area that can grow */}
         <Search />
         <LocationTracter />
         <ResturantList />
