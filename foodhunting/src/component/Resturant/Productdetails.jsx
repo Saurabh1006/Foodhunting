@@ -60,7 +60,6 @@ const ProductDetails = () => {
 
   return (
     <div className="container-max">
-        console.log("product")
       <h1 className="text-2xl font-bold">{product.name}</h1>
       <img src={product.imageUrl} alt={product.name} className="w-full h-64 object-cover" />
       <p>{product.description}</p>
