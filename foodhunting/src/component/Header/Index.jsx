@@ -17,6 +17,9 @@ const Index = () => {
         // Add your login logic here
        navigate('/login')
     };
+    const handleAboutClicked=()=>{
+        navigate('/about')
+    }
 
     return (
         <div>
@@ -55,13 +58,13 @@ const Index = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to='/about'
+                            <div
+                                    onClick={handleAboutClicked}
                                 className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'
                             >
                                 <BuildingOfficeIcon className='w-4 h-4 text-gray-700' />
                                 <p className='hidden md:block'>About</p>
-                            </Link>
+                            </div>
                         </li>
                         <li>
                             <Link

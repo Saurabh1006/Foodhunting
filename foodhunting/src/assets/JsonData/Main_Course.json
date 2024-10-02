@@ -1,0 +1,210 @@
+{
+    "menu": [
+      {
+        "category": "Main Course",
+        "items": [
+          {
+            "itemId": 1,
+            "name": "Grilled Chicken with Vegetables",
+            "description": "Juicy grilled chicken served with sautéed vegetables.",
+            "price": 12.99,
+            "rating": 4.5,
+            "imageUrl": "https://example.com/images/grilled-chicken.jpg"
+          },
+          {
+            "itemId": 2,
+            "name": "Beef Steak with Garlic Butter",
+            "description": "Tender beef steak topped with garlic butter and served with mashed potatoes.",
+            "price": 19.99,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/beef-steak.jpg"
+          },
+          {
+            "itemId": 3,
+            "name": "Pasta Alfredo",
+            "description": "Creamy alfredo pasta with parmesan cheese and grilled shrimp.",
+            "price": 14.49,
+            "rating": 4.4,
+            "imageUrl": "https://example.com/images/pasta-alfredo.jpg"
+          },
+          {
+            "itemId": 4,
+            "name": "Vegan Buddha Bowl",
+            "description": "A nourishing bowl filled with quinoa, avocado, and mixed greens.",
+            "price": 10.99,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/vegan-buddha-bowl.jpg"
+          },
+          {
+            "itemId": 5,
+            "name": "Chicken Tikka Masala",
+            "description": "Spicy and flavorful chicken tikka in a rich masala sauce.",
+            "price": 13.99,
+            "rating": 4.7,
+            "imageUrl": "https://example.com/images/chicken-tikka-masala.jpg"
+          },
+          {
+            "itemId": 6,
+            "name": "BBQ Ribs",
+            "description": "Slow-cooked BBQ ribs served with coleslaw and fries.",
+            "price": 16.49,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/bbq-ribs.jpg"
+          },
+          {
+            "itemId": 7,
+            "name": "Margherita Pizza",
+            "description": "Classic pizza topped with mozzarella, fresh tomatoes, and basil.",
+            "price": 9.99,
+            "rating": 4.4,
+            "imageUrl": "https://example.com/images/margherita-pizza.jpg"
+          },
+          {
+            "itemId": 8,
+            "name": "Lamb Shawarma Plate",
+            "description": "Tender lamb shawarma with hummus, pita, and salad.",
+            "price": 15.49,
+            "rating": 4.7,
+            "imageUrl": "https://example.com/images/lamb-shawarma.jpg"
+          },
+          {
+            "itemId": 9,
+            "name": "Salmon Teriyaki",
+            "description": "Grilled salmon with teriyaki sauce and jasmine rice.",
+            "price": 17.99,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/salmon-teriyaki.jpg"
+          },
+          {
+            "itemId": 10,
+            "name": "Pad Thai",
+            "description": "Stir-fried rice noodles with chicken, peanuts, and lime.",
+            "price": 11.99,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/pad-thai.jpg"
+          },
+          {
+            "itemId": 11,
+            "name": "Mushroom Risotto",
+            "description": "Creamy risotto with sautéed mushrooms and parmesan.",
+            "price": 13.99,
+            "rating": 4.5,
+            "imageUrl": "https://example.com/images/mushroom-risotto.jpg"
+          },
+          {
+            "itemId": 12,
+            "name": "Fish and Chips",
+            "description": "Crispy fried fish served with thick-cut fries and tartar sauce.",
+            "price": 12.49,
+            "rating": 4.4,
+            "imageUrl": "https://example.com/images/fish-and-chips.jpg"
+          },
+          {
+            "itemId": 13,
+            "name": "Korean BBQ Beef",
+            "description": "Grilled beef with Korean BBQ sauce served with rice and kimchi.",
+            "price": 18.49,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/korean-bbq-beef.jpg"
+          },
+          {
+            "itemId": 14,
+            "name": "Eggplant Parmesan",
+            "description": "Layers of breaded eggplant, marinara sauce, and melted cheese.",
+            "price": 12.99,
+            "rating": 4.5,
+            "imageUrl": "https://example.com/images/eggplant-parmesan.jpg"
+          },
+          {
+            "itemId": 15,
+            "name": "Buffalo Wings",
+            "description": "Spicy buffalo wings served with blue cheese dipping sauce.",
+            "price": 9.49,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/buffalo-wings.jpg"
+          },
+          {
+            "itemId": 16,
+            "name": "Chicken Caesar Salad",
+            "description": "Grilled chicken served over romaine lettuce with Caesar dressing.",
+            "price": 11.99,
+            "rating": 4.5,
+            "imageUrl": "https://example.com/images/chicken-caesar-salad.jpg"
+          },
+          {
+            "itemId": 17,
+            "name": "Shrimp Scampi",
+            "description": "Shrimp sautéed in garlic butter with linguine.",
+            "price": 16.99,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/shrimp-scampi.jpg"
+          },
+          {
+            "itemId": 18,
+            "name": "Vegetable Stir-fry",
+            "description": "Fresh vegetables stir-fried with soy sauce and served over rice.",
+            "price": 10.49,
+            "rating": 4.3,
+            "imageUrl": "https://example.com/images/vegetable-stir-fry.jpg"
+          },
+          {
+            "itemId": 19,
+            "name": "Turkey Club Sandwich",
+            "description": "Roasted turkey, bacon, lettuce, and tomato on toasted bread.",
+            "price": 8.99,
+            "rating": 4.2,
+            "imageUrl": "https://example.com/images/turkey-club-sandwich.jpg"
+          },
+          {
+            "itemId": 20,
+            "name": "Spaghetti Bolognese",
+            "description": "Classic spaghetti with a rich meat sauce.",
+            "price": 12.99,
+            "rating": 4.7,
+            "imageUrl": "https://example.com/images/spaghetti-bolognese.jpg"
+          },
+          {
+            "itemId": 21,
+            "name": "Pork Schnitzel",
+            "description": "Crispy pork schnitzel served with potato salad and mustard sauce.",
+            "price": 14.99,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/pork-schnitzel.jpg"
+          },
+          {
+            "itemId": 22,
+            "name": "Lobster Roll",
+            "description": "Fresh lobster meat served on a toasted roll with butter.",
+            "price": 19.99,
+            "rating": 4.9,
+            "imageUrl": "https://example.com/images/lobster-roll.jpg"
+          },
+          {
+            "itemId": 23,
+            "name": "Falafel Wrap",
+            "description": "Crispy falafel, hummus, and vegetables wrapped in pita.",
+            "price": 8.49,
+            "rating": 4.4,
+            "imageUrl": "https://example.com/images/falafel-wrap.jpg"
+          },
+          {
+            "itemId": 24,
+            "name": "Baked Ziti",
+            "description": "Pasta baked with marinara sauce, ricotta, and mozzarella cheese.",
+            "price": 11.99,
+            "rating": 4.5,
+            "imageUrl": "https://example.com/images/baked-ziti.jpg"
+          },
+          {
+            "itemId": 25,
+            "name": "Beef Bourguignon",
+            "description": "Slow-cooked beef in red wine with mushrooms and onions.",
+            "price": 18.99,
+            "rating": 4.9,
+            "imageUrl": "https://example.com/images/beef-bourguignon.jpg"
+          }
+        ]
+      }
+    ]
+  }
+  
