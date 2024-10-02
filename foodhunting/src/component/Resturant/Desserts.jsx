@@ -32,7 +32,7 @@ const desserts = () => {
                     ) : displayedData.length !== 0 ? (
                         displayedData.map((dessert, i) => (
                             <Link
-                                to={`/desserts/${dessert.itemId}`} // Use dessert.itemId for unique IDs
+                                to={`/dessert/${dessert.itemId}`} // Use dessert.itemId for unique IDs
                                 className='hover:scale-95 transition ease-in-out duration-300 relative z-10'
                                 key={i}
                             >
@@ -52,9 +52,11 @@ const desserts = () => {
                         <p>No desserts found!</p>
                     )}
                 </div>
-                <h1 className='my-4 mt-8 font-bold text-2xl text-zinc-700 flex justify-center items-center'>
-        See All
-        </h1>
+                <div className="mt-4 bg-orange-100 p-2 rounded text-center hover:bg-orange-400 transition ease-in-out duration-500 cursor-pointer mt-4">
+  <h1 className='my-2 font-bold text-2xl text-zinc-700'>
+    See All
+  </h1>
+</div>
             </div>
         </div>
     );
