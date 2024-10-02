@@ -7,6 +7,7 @@ import Index from './component/Home/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import About from './pages/About'
+import Productdetails from './component/Resturant/Productdetails';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Signup />} />
         <Route path="/about" element={<About />} />
+        <Route path="/:jsonType/:id" element={<Productdetails />}/>
       </Routes>
     </>
   )

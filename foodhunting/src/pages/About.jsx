@@ -19,19 +19,7 @@ const About = () => {
           </p>
           <p>
             This project was built 🔧 during the coursework of{' '}
-            <a
-              className='text-orange-600'
-              href='https://namastedev.com/namaste-react/'
-            >
-              Namaste React
-            </a>{' '}
-            taught by{' '}
-            <a
-              className='text-orange-600'
-              href='https://www.linkedin.com/in/akshaymarch7/'
-            >
-              Akshay Saini
-            </a>
+            
           </p>
 
           {/* <p>count1 : {this.state.count}</p>

@@ -1,0 +1,171 @@
+{
+    "desserts": [
+      {
+        "category": "Desserts",
+        "items": [
+          {
+            "itemId": 1,
+            "name": "Chocolate Lava Cake",
+            "description": "A rich, molten chocolate cake served warm.",
+            "price": 5.99,
+            "rating": 4.9,
+            "imageUrl": "https://www.freepik.com/free-photo/close-up-chocolate-cake_9210119.htm#query=chocolate%20lava%20cake&position=25&from_view=keyword&track=ais_hybrid&uuid=f640e84b-5a9f-49b0-aed6-ee94021c4483"
+          },
+          {
+            "itemId": 2,
+            "name": "New York Cheesecake",
+            "description": "Classic creamy cheesecake with a graham cracker crust.",
+            "price": 6.49,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/new_york_cheesecake.jpg"
+          },
+          {
+            "itemId": 3,
+            "name": "Tiramisu",
+            "description": "Traditional Italian dessert with mascarpone, coffee, and cocoa.",
+            "price": 5.49,
+            "rating": 4.7,
+            "imageUrl": "https://example.com/images/tiramisu.jpg"
+          },
+          {
+            "itemId": 4,
+            "name": "Apple Pie",
+            "description": "Homemade apple pie with a buttery, flaky crust.",
+            "price": 4.99,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/apple_pie.jpg"
+          },
+          {
+            "itemId": 5,
+            "name": "Creme Brulee",
+            "description": "A creamy custard topped with a caramelized sugar crust.",
+            "price": 6.99,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/creme_brulee.jpg"
+          },
+          {
+            "itemId": 6,
+            "name": "Banana Split",
+            "description": "Classic dessert with bananas, ice cream, and chocolate syrup.",
+            "price": 5.49,
+            "rating": 4.7,
+            "imageUrl": "https://example.com/images/banana_split.jpg"
+          },
+          {
+            "itemId": 7,
+            "name": "Red Velvet Cake",
+            "description": "Moist red velvet cake with cream cheese frosting.",
+            "price": 6.49,
+            "rating": 4.9,
+            "imageUrl": "https://example.com/images/red_velvet_cake.jpg"
+          },
+          {
+            "itemId": 8,
+            "name": "Chocolate Chip Cookies",
+            "description": "Freshly baked cookies with gooey chocolate chips.",
+            "price": 3.99,
+            "rating": 4.5,
+            "imageUrl": "https://example.com/images/chocolate_chip_cookies.jpg"
+          },
+          {
+            "itemId": 9,
+            "name": "Brownie Sundae",
+            "description": "Warm brownie topped with vanilla ice cream and fudge sauce.",
+            "price": 6.49,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/brownie_sundae.jpg"
+          },
+          {
+            "itemId": 10,
+            "name": "Pecan Pie",
+            "description": "Traditional southern pecan pie with a rich filling.",
+            "price": 5.99,
+            "rating": 4.7,
+            "imageUrl": "https://example.com/images/pecan_pie.jpg"
+          },
+          {
+            "itemId": 11,
+            "name": "Lemon Meringue Pie",
+            "description": "Tart lemon filling topped with fluffy meringue.",
+            "price": 5.49,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/lemon_meringue_pie.jpg"
+          },
+          {
+            "itemId": 12,
+            "name": "Carrot Cake",
+            "description": "Moist carrot cake with cream cheese frosting.",
+            "price": 6.49,
+            "rating": 4.9,
+            "imageUrl": "https://example.com/images/carrot_cake.jpg"
+          },
+          {
+            "itemId": 13,
+            "name": "Chocolate Mousse",
+            "description": "Rich and creamy chocolate mousse with whipped cream.",
+            "price": 5.99,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/chocolate_mousse.jpg"
+          },
+          {
+            "itemId": 14,
+            "name": "Vanilla Ice Cream",
+            "description": "Classic vanilla bean ice cream.",
+            "price": 3.49,
+            "rating": 4.4,
+            "imageUrl": "https://example.com/images/vanilla_ice_cream.jpg"
+          },
+          {
+            "itemId": 15,
+            "name": "Profiteroles",
+            "description": "Choux pastry filled with cream and drizzled with chocolate.",
+            "price": 5.99,
+            "rating": 4.8,
+            "imageUrl": "https://example.com/images/profiteroles.jpg"
+          },
+          {
+            "itemId": 16,
+            "name": "Pumpkin Pie",
+            "description": "Spiced pumpkin pie with a flaky crust.",
+            "price": 4.99,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/pumpkin_pie.jpg"
+          },
+          {
+            "itemId": 17,
+            "name": "Molten Chocolate Souffle",
+            "description": "Warm chocolate souffle with a liquid center.",
+            "price": 7.49,
+            "rating": 4.9,
+            "imageUrl": "https://example.com/images/molten_chocolate_souffle.jpg"
+          },
+          {
+            "itemId": 18,
+            "name": "Strawberry Shortcake",
+            "description": "Fluffy shortcake topped with fresh strawberries and whipped cream.",
+            "price": 5.99,
+            "rating": 4.7,
+            "imageUrl": "https://example.com/images/strawberry_shortcake.jpg"
+          },
+          {
+            "itemId": 19,
+            "name": "Baklava",
+            "description": "Layers of phyllo dough filled with nuts and honey syrup.",
+            "price": 4.99,
+            "rating": 4.5,
+            "imageUrl": "https://example.com/images/baklava.jpg"
+          },
+          {
+            "itemId": 20,
+            "name": "Eclairs",
+            "description": "Pastry filled with cream and topped with chocolate glaze.",
+            "price": 5.99,
+            "rating": 4.6,
+            "imageUrl": "https://example.com/images/eclairs.jpg"
+          }
+      
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,205 @@
+{
+    "beverages": [
+      {
+        "itemId": 1,
+        "name": "Coca-Cola",
+        "description": "A refreshing cola drink.",
+        "price": 1.99,
+        "rating": 4.5,
+        "imageUrl": "https://example.com/images/coca-cola.jpg"
+      },
+      {
+        "itemId": 2,
+        "name": "Sprite",
+        "description": "A crisp, lemon-lime soda.",
+        "price": 1.89,
+        "rating": 4.3,
+        "imageUrl": "https://example.com/images/sprite.jpg"
+      },
+      {
+        "itemId": 3,
+        "name": "Fanta",
+        "description": "A fruity orange soda.",
+        "price": 1.99,
+        "rating": 4.4,
+        "imageUrl": "https://example.com/images/fanta.jpg"
+      },
+      {
+        "itemId": 4,
+        "name": "Pepsi",
+        "description": "A bold and refreshing cola.",
+        "price": 1.99,
+        "rating": 4.2,
+        "imageUrl": "https://example.com/images/pepsi.jpg"
+      },
+      {
+        "itemId": 5,
+        "name": "Lemonade",
+        "description": "Freshly squeezed lemonade.",
+        "price": 2.49,
+        "rating": 4.6,
+        "imageUrl": "https://example.com/images/lemonade.jpg"
+      },
+      {
+        "itemId": 6,
+        "name": "Iced Tea",
+        "description": "Refreshing brewed iced tea.",
+        "price": 2.29,
+        "rating": 4.5,
+        "imageUrl": "https://example.com/images/iced-tea.jpg"
+      },
+      {
+        "itemId": 7,
+        "name": "Orange Juice",
+        "description": "Freshly squeezed orange juice.",
+        "price": 2.99,
+        "rating": 4.7,
+        "imageUrl": "https://example.com/images/orange-juice.jpg"
+      },
+      {
+        "itemId": 8,
+        "name": "Apple Juice",
+        "description": "Pure and fresh apple juice.",
+        "price": 2.49,
+        "rating": 4.4,
+        "imageUrl": "https://example.com/images/apple-juice.jpg"
+      },
+      {
+        "itemId": 9,
+        "name": "Ginger Ale",
+        "description": "A refreshing ginger-flavored soda.",
+        "price": 1.89,
+        "rating": 4.3,
+        "imageUrl": "https://example.com/images/ginger-ale.jpg"
+      },
+      {
+        "itemId": 10,
+        "name": "Root Beer",
+        "description": "A classic root beer soda.",
+        "price": 1.99,
+        "rating": 4.5,
+        "imageUrl": "https://example.com/images/root-beer.jpg"
+      },
+      {
+        "itemId": 11,
+        "name": "Energy Drink",
+        "description": "A boost of energy in a can.",
+        "price": 2.99,
+        "rating": 4.2,
+        "imageUrl": "https://example.com/images/energy-drink.jpg"
+      },
+      {
+        "itemId": 12,
+        "name": "Sparkling Water",
+        "description": "Refreshing sparkling mineral water.",
+        "price": 1.49,
+        "rating": 4.4,
+        "imageUrl": "https://example.com/images/sparkling-water.jpg"
+      },
+      {
+        "itemId": 13,
+        "name": "Milkshake",
+        "description": "Creamy and delicious milkshake.",
+        "price": 3.49,
+        "rating": 4.8,
+        "imageUrl": "https://example.com/images/milkshake.jpg"
+      },
+      {
+        "itemId": 14,
+        "name": "Hot Chocolate",
+        "description": "Rich and warm hot chocolate.",
+        "price": 2.99,
+        "rating": 4.6,
+        "imageUrl": "https://example.com/images/hot-chocolate.jpg"
+      },
+      {
+        "itemId": 15,
+        "name": "Frappuccino",
+        "description": "Chilled coffee beverage blended with ice.",
+        "price": 3.99,
+        "rating": 4.7,
+        "imageUrl": "https://example.com/images/frappuccino.jpg"
+      },
+      {
+        "itemId": 16,
+        "name": "Smoothie",
+        "description": "Healthy blended fruit smoothie.",
+        "price": 3.49,
+        "rating": 4.5,
+        "imageUrl": "https://example.com/images/smoothie.jpg"
+      },
+      {
+        "itemId": 17,
+        "name": "Chai Latte",
+        "description": "Spiced tea blended with steamed milk.",
+        "price": 2.99,
+        "rating": 4.4,
+        "imageUrl": "https://example.com/images/chai-latte.jpg"
+      },
+      {
+        "itemId": 18,
+        "name": "Mango Lassi",
+        "description": "Creamy yogurt drink with mango.",
+        "price": 3.49,
+        "rating": 4.6,
+        "imageUrl": "https://example.com/images/mango-lassi.jpg"
+      },
+      {
+        "itemId": 19,
+        "name": "Berry Smoothie",
+        "description": "Mixed berry smoothie with yogurt.",
+        "price": 3.99,
+        "rating": 4.7,
+        "imageUrl": "https://example.com/images/berry-smoothie.jpg"
+      },
+      {
+        "itemId": 20,
+        "name": "Pineapple Juice",
+        "description": "Refreshing pineapple juice.",
+        "price": 2.99,
+        "rating": 4.4,
+        "imageUrl": "https://example.com/images/pineapple-juice.jpg"
+      },
+      {
+        "itemId": 21,
+        "name": "Peach Iced Tea",
+        "description": "Iced tea with a hint of peach.",
+        "price": 2.49,
+        "rating": 4.5,
+        "imageUrl": "https://example.com/images/peach-iced-tea.jpg"
+      },
+      {
+        "itemId": 22,
+        "name": "Black Tea",
+        "description": "Classic brewed black tea.",
+        "price": 1.99,
+        "rating": 4.3,
+        "imageUrl": "https://example.com/images/black-tea.jpg"
+      },
+      {
+        "itemId": 23,
+        "name": "Coffee",
+        "description": "Freshly brewed coffee.",
+        "price": 2.49,
+        "rating": 4.6,
+        "imageUrl": "https://example.com/images/coffee.jpg"
+      },
+      {
+        "itemId": 24,
+        "name": "Iced Coffee",
+        "description": "Chilled coffee with ice.",
+        "price": 2.99,
+        "rating": 4.5,
+        "imageUrl": "https://example.com/images/iced-coffee.jpg"
+      },
+      {
+        "itemId": 25,
+        "name": "Coconut Water",
+        "description": "Refreshing coconut water.",
+        "price": 2.99,
+        "rating": 4.7,
+        "imageUrl": "https://example.com/images/coconut-water.jpg"
+      }
+    ]
+  }
+  
