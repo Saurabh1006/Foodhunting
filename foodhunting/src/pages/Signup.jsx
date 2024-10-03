@@ -1,42 +1,88 @@
-import React from 'react'
-import { FaFacebook } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io";
-import { FaGoogle } from "react-icons/fa";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { auth } from '../../firebase';  // Import the Firebase auth instance
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { toast } from 'react-hot-toast';
 
-const Signup = () => {
+function Signup() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleSignup = () => {
+    if (!validateEmail(email)) {
+      toast.error('Invalid email address');
+      return;
+    }
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log('User registered:', user);
+        toast.success('Account created successfully!');
+        navigate('/login');  // Navigate to the login page after successful signup
+      })
+      .catch((error) => {
+        setError(error.message);
+        toast.error(`Signup failed: ${error.message}`);
+      });
+  };
+
   return (
     <div>
-       <div className="bg-blue-400 text-white rounded-2xl shadow-2xl  flex flex-col w-full  md:w-1/3 items-center max-w-4xl transition duration-1000 ease-in">
-              <h2 className='p-3 text-3xl font-bold text-white'>Horiz</h2>
-             <div className="inline-block border-[1px] justify-center w-20 border-white border-solid"></div>
-             <h3 className='text-xl font-semibold text-white pt-2'>Create Account!</h3>
-             <div className='flex space-x-2 m-4 items-center justify-center'>
-                <div className="socialIcon border-white">
-                <FaFacebook  className="text-white"/>
-                </div>
-                <div className="socialIcon border-white">
-                <IoLogoGithub className="text-white"/>
-                </div>
-                <div className="socialIcon border-white">
-                <FaGoogle className="text-white"/>  
-                </div>
-             </div>
-             {/* Inputs */}
-             <div className='flex flex-col items-center justify-center mt-2'>
-             <input type="password" className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-blue-400 m-1 focus:shadow-md focus:border-pink-400 focus:outline-none focus:ring-0' placeholder='Name'></input>
-              <input type='email' className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-blue-400 m-1 focus:shadow-md focus:border-pink-400 focus:outline-none focus:ring-0' placeholder='Email'></input>
-              <input type="password" className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-blue-400 m-1 focus:shadow-md focus:border-pink-400 focus:outline-none focus:ring-0' placeholder='Password'></input>
-              <input type="password" className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-blue-400 m-1 focus:shadow-md focus:border-pink-400 focus:outline-none focus:ring-0' placeholder='Avatar URL'></input>
-              <button className='rounded-2xl m-4 text-blue-400 bg-white w-3/5 px-4 py-2 shadow-md hover:text-white hover:bg-blue-400 transition duration-200 ease-in'>
+      <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
+        <div className="md:w-1/3 max-w-sm">
+          <img
+            src="https://www.svgrepo.com/show/4151/food.svg"
+            alt="Sample image"
+          />
+        </div>
+        <div className="md:w-1/3 max-w-sm">
+          <div className="my-5">
+            <input
+              className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
+              type="text"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}  // Update email state
+            />
+            <input
+              className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}  // Update password state
+            />
+            <div className="text-center md:text-left">
+              <button
+                className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider"
+                type="button"
+                onClick={handleSignup}
+              >
                 Sign Up
               </button>
-             </div>
-             <div className="inline-block border-[1px] justify-center w-20 border-white border-solid"></div>
-             <p className='text-white mt-4 text-sm'>Already have an account?</p>
-             <p className='text-white mb-4 text-sm font-medium cursor-pointer'>Sign In to your Account?</p>
+            </div>
+            <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
+              Already have an account?{' '}
+              <a
+                href="/login"
+                className="text-red-600 hover:underline hover:underline-offset-4"
+              >
+                Login
+              </a>
+            </div>
+            {error && <p className="text-red-500 text-sm">{error}</p>}
           </div>
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default Signup
+export default Signup;
