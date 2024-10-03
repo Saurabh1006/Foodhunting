@@ -10,26 +10,36 @@ import {
     ShoppingBagIcon,
 } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
-import { useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 const Index = () => {
     const navigate = useNavigate();
+
     const handleLoginClick = () => {
         // Add your login logic here
-       navigate('/login')
+        navigate('/login');
+    };
+const handleCart=()=>{
+    navigate('/cart');
+}
+
+    const handleAboutClicked = () => {
+        navigate('/about');
+    };
+    const handleContactClicked = () => {
+        navigate('/contact_us');
     };
 
     return (
-        <div>
+        <div className='sticky w-full top-0 bg-white z-20'>
             <header className='sticky w-full top-0 bg-white z-20 py-4 border-b shadow-sm border-gray-100 h-[60px]'>
-                <div className='container-max flex justify-between items-center'>
+                <div className='container-max flex justify-between items-center flex-wrap'>
                     <div className='flex items-center gap-2 md:gap-4'>
                         <div>
-                        
+                            {/* Logo can go here */}
                         </div>
-                        {/* <Logo /> */}
                         <button className='text-xs md:text-sm flex items-center gap-1'>
                             <MapPinIcon className='w-4 h-4 text-gray-700' />
-                            {/* {address?.city} */}
                             <ChevronDownIcon className='w-4 h-4 text-orange-500' />
                         </button>
                     </div>
@@ -55,35 +65,31 @@ const Index = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to='/about'
+                            <div
+                                onClick={handleAboutClicked}
                                 className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'
                             >
                                 <BuildingOfficeIcon className='w-4 h-4 text-gray-700' />
                                 <p className='hidden md:block'>About</p>
-                            </Link>
+                            </div>
                         </li>
                         <li>
-                            <Link
-                                to='/contact'
+                            <p
+                                onClick={handleContactClicked}
                                 className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'
                             >
                                 <PhoneIcon className='w-4 h-4 text-gray-700' />
                                 <p className='hidden md:block'>Contact</p>
-                            </Link>
+                            </p>
                         </li>
                         <li>
-                            <Link
-                                to='/cart'
+                            <p
+                                onClick={handleCart}
                                 className='p-2 relative md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'
                             >
                                 <ShoppingBagIcon className='w-4 h-4 text-gray-700' />
                                 <p className='hidden md:block'>Cart</p>
-                                {/* Uncomment below to display items count */}
-                                {/* <p className='absolute -top-1 -right-1 bg-orange-500 text-white flex justify-center items-center w-5 h-5 text-xs rounded-full'>
-                                    {items.length}
-                                </p> */}
-                            </Link>
+                            </p>
                         </li>
                     </ul>
 

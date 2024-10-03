@@ -1,34 +1,29 @@
 import React from 'react'
-
+import ShimmerCard from './ShimmerCard'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import mainData from '../../assets/JsonData/Main_Course.json'
+import Beverages from './Beverages'
+import Dessert from './desserts';
+import MainCourse from './MainCourse';
 const ResturantList = () => {
+  const [restaurants, setRestaurants] = useState(mainData);
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect(() => {
+    if (restaurants.length === 0) {
+      setIsLoading(true);
+    } else {
+      setIsLoading(false);
+    }
+  }, [restaurants]);
   return (
     <div>
        <div className='container-max'>
-      <h1 className='my-4 mt-8 font-bold text-2xl text-zinc-700'>
-        Restaurants near you
-      </h1>
+      <MainCourse/>
+      <Beverages/>
+      <Dessert/>
 
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8'>
-        {/* {isLoading ? (
-          Array.from({ length: 15 }).map((_, i) => <ShimmerCard key={i} />)
-        ) : restaurants && restaurants?.length !== 0 ? (
-          restaurants.map((restaurant, i) => (
-            <Link
-              to={`/restaurants/${restaurant.info.id}`}
-              className='hover:scale-95 transition ease-in-out duration-300 relative z-10'
-              key={i}
-            >
-              {restaurant.info.avgRating >= 4.2 ? (
-                <RestaurantCardTopRated restaurant={restaurant} />
-              ) : (
-                <RestaurantCard restaurant={restaurant} />
-              )}
-            </Link>
-          ))
-        ) : ( */}
-          <p>No restaurant found!</p>
-        {/* )} */}
-      </div>
+    
     </div>
     </div>
   )
