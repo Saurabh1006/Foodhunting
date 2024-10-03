@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import mainData from '../../assets/JsonData/Main_Course.json';
 import ShimmerCard from './ShimmerCard';
 import { FiShoppingCart } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 const MainCourse = () => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -19,6 +20,11 @@ const MainCourse = () => {
 
     fetchData();
   }, []);
+
+  const navigate = useNavigate();
+  const handleAllProduct=()=>{
+    navigate('/allproduct');
+  }
 
   // Slice the data to show only the first 9 items
   const displayedData = data.slice(0, 9);
@@ -62,7 +68,7 @@ const MainCourse = () => {
           )}
         </div>
       </div>
-      <div className="mt-4 bg-orange-100 p-2 rounded text-center hover:bg-orange-400 transition ease-in-out duration-500 cursor-pointer mt-4">
+      <div className="mt-4 bg-orange-100 p-2 rounded text-center hover:bg-orange-400 transition ease-in-out duration-500 cursor-pointer mt-4" onClick={handleAllProduct}>
   <h1 className='my-2 font-bold text-2xl text-zinc-700'>
     See All
   </h1>

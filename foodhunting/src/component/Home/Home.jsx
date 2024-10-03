@@ -11,7 +11,7 @@ const Home = () => {
       <Header  className=" fixed top-0"/>
       <main className='flex-grow'> {/* Main content area that can grow */}
         <Search />
-        <LocationTracter />
+        {/* <LocationTracter /> */}
         <ResturantList />
       </main>
       <Footer />

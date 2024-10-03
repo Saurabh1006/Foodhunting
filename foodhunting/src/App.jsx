@@ -8,6 +8,9 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import About from './pages/About'
 import Productdetails from './component/Resturant/Productdetails';
+import AllProductList from './component/Resturant/AllProductList';
+import ContactForm from './pages/ContactForm';
+import Cart from './pages/Cart';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,6 +23,9 @@ function App() {
         <Route path="/registration" element={<Signup />} />
         <Route path="/about" element={<About />} />
         <Route path="/:jsonType/:id" element={<Productdetails />}/>
+        <Route path="/allproduct" element={<AllProductList />}/>
+        <Route path="/cart" element={<Cart />}/>
+        <Route path="/contact_us" element={<ContactForm />}/>
       </Routes>
     </>
   )

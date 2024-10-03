@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import BeveragesJsonData from '../../assets/JsonData/Beverages.json'; // Import JSON data
 import ShimmerCard from './ShimmerCard';
-
+import { useNavigate } from 'react-router-dom';
 const Beverages = () => {
   const [data, setData] = useState(BeveragesJsonData.beverages); // Access 'beverages' array from the JSON
   const [isLoading, setLoading] = useState(true);
@@ -14,6 +14,10 @@ const Beverages = () => {
       setLoading(false);
     }
   }, [data]);
+  const navigate = useNavigate();
+    const handleAllProduct=()=>{
+        navigate('/allproduct');
+      }
 
   const displayedData = data.slice(0, 9); // Display first 9 items
 
@@ -48,7 +52,9 @@ const Beverages = () => {
             <p>No beverages found!</p>
           )}
         </div>
-        <div className="mt-4 bg-orange-100 p-2 rounded text-center hover:bg-orange-400 transition ease-in-out duration-500 cursor-pointer mt-4">
+        <div className="mt-4 bg-orange-100 p-2 rounded text-center hover:bg-orange-400 transition ease-in-out duration-500 cursor-pointer mt-4"
+        onClick={handleAllProduct}
+        >
   <h1 className='my-2 font-bold text-2xl text-zinc-700'>
     See All
   </h1>

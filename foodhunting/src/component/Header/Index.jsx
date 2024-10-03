@@ -19,9 +19,15 @@ const Index = () => {
         // Add your login logic here
         navigate('/login');
     };
+const handleCart=()=>{
+    navigate('/cart');
+}
 
     const handleAboutClicked = () => {
         navigate('/about');
+    };
+    const handleContactClicked = () => {
+        navigate('/contact_us');
     };
 
     return (
@@ -68,22 +74,22 @@ const Index = () => {
                             </div>
                         </li>
                         <li>
-                            <Link
-                                to='/contact'
+                            <p
+                                onClick={handleContactClicked}
                                 className='p-2 md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'
                             >
                                 <PhoneIcon className='w-4 h-4 text-gray-700' />
                                 <p className='hidden md:block'>Contact</p>
-                            </Link>
+                            </p>
                         </li>
                         <li>
-                            <Link
-                                to='/cart'
+                            <p
+                                onClick={handleCart}
                                 className='p-2 relative md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2'
                             >
                                 <ShoppingBagIcon className='w-4 h-4 text-gray-700' />
                                 <p className='hidden md:block'>Cart</p>
-                            </Link>
+                            </p>
                         </li>
                     </ul>
 
