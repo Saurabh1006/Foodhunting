@@ -34,7 +34,7 @@ const Cart = () => {
     <div className="min-h-screen bg-gray-100">
     <header className="bg-blue-900 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-xl font-bold">Solo Stove</div>
+          <div className="text-xl font-bold">Food Hunting </div>
           <nav className="hidden md:flex space-x-4">
             {/* <a href="#" className="hover:underline">Fire Pits</a>
             <a href="#" className="hover:underline">Pizza Oven</a>
@@ -42,11 +42,7 @@ const Cart = () => {
             <a href="#" className="hover:underline">Camp Stoves</a>
             <a href="#" className="hover:underline">Corporate Sales</a> */}
           </nav>
-          <div className="flex items-center space-x-4">
-            <input type="text" placeholder="Search" className="p-2 rounded text-black" />
-            <FaUser className="h-6 w-6" />
-            <MdOutlineShoppingCart className="h-6 w-6" />
-          </div>
+          
         </div>
       </header>
     <main className="container mx-auto mt-8 p-4">
