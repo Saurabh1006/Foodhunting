@@ -1,10 +1,34 @@
-// redux/cartSlice.js
+// src/redux/cartSlice.js
 import { createSlice } from '@reduxjs/toolkit';
+
+// Utility function to merge duplicate cart items
+const mergeCartItems = (cartItems) => {
+  const mergedCart = {};
+
+  cartItems.forEach((item) => {
+    const itemId = item.itemId;
+    // Ensure quantity is at least 1
+    const quantity = item.quantity && item.quantity > 0 ? item.quantity : 1;
+
+    if (mergedCart[itemId]) {
+      mergedCart[itemId].quantity += quantity;
+    } else {
+      mergedCart[itemId] = { ...item, quantity };
+    }
+  });
+
+  // Convert the mergedCart object back to an array
+  return Object.values(mergedCart);
+};
 
 const cartSlice = createSlice({
   name: 'cart',
   initialState: [], // Initial state as an array of cart items
   reducers: {
+    // Sets the entire cart (used for initializing from localStorage)
+    setCartItems: (state, action) => {
+      return mergeCartItems(action.payload);
+    },
     addToCart: (state, action) => {
       // Check if the item already exists in the cart
       const existingItem = state.find(item => item.itemId === action.payload.itemId);
@@ -36,7 +60,7 @@ const cartSlice = createSlice({
 });
 
 // Export actions
-export const { addToCart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, setCartItems } = cartSlice.actions;
 
 // Export reducer as default
 export default cartSlice.reducer;
@@ -45,6 +69,6 @@ export default cartSlice.reducer;
 export const selectTotalItems = (state) => {
   return state.cart.reduce((total, item) => total + item.quantity, 0);
 };
-console.log(selectTotalItems);
 
+// Select all cart items
 export const selectCartItems = (state) => state.cart;
