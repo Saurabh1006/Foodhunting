@@ -88,14 +88,14 @@ const AllProductList = () => {
       ))}
 
       {/* Display cart items or total count */}
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <h3 className="font-bold text-lg">Cart Items: {cart.length}</h3>
         {cart.map(item => (
           <div key={item.itemId} className="p-2 border-b">
             {item.name} - ${item.price}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

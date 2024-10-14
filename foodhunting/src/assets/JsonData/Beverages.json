@@ -1,7 +1,7 @@
 {
     "beverages": [
       {
-        "itemId": 1,
+        "itemId": 26,
         "name": "Coca-Cola",
         "description": "A refreshing cola drink.",
         "price": 1.99,
@@ -9,7 +9,7 @@
         "imageUrl": "https://example.com/images/coca-cola.jpg"
       },
       {
-        "itemId": 2,
+        "itemId": 27,
         "name": "Sprite",
         "description": "A crisp, lemon-lime soda.",
         "price": 1.89,
@@ -17,7 +17,7 @@
         "imageUrl": "https://example.com/images/sprite.jpg"
       },
       {
-        "itemId": 3,
+        "itemId": 28,
         "name": "Fanta",
         "description": "A fruity orange soda.",
         "price": 1.99,
@@ -25,7 +25,7 @@
         "imageUrl": "https://example.com/images/fanta.jpg"
       },
       {
-        "itemId": 4,
+        "itemId": 29,
         "name": "Pepsi",
         "description": "A bold and refreshing cola.",
         "price": 1.99,
@@ -33,7 +33,7 @@
         "imageUrl": "https://example.com/images/pepsi.jpg"
       },
       {
-        "itemId": 5,
+        "itemId": 30,
         "name": "Lemonade",
         "description": "Freshly squeezed lemonade.",
         "price": 2.49,
@@ -41,7 +41,7 @@
         "imageUrl": "https://example.com/images/lemonade.jpg"
       },
       {
-        "itemId": 6,
+        "itemId": 40,
         "name": "Iced Tea",
         "description": "Refreshing brewed iced tea.",
         "price": 2.29,
@@ -49,7 +49,7 @@
         "imageUrl": "https://example.com/images/iced-tea.jpg"
       },
       {
-        "itemId": 7,
+        "itemId": 41,
         "name": "Orange Juice",
         "description": "Freshly squeezed orange juice.",
         "price": 2.99,
@@ -57,7 +57,7 @@
         "imageUrl": "https://example.com/images/orange-juice.jpg"
       },
       {
-        "itemId": 8,
+        "itemId": 42,
         "name": "Apple Juice",
         "description": "Pure and fresh apple juice.",
         "price": 2.49,
@@ -65,7 +65,7 @@
         "imageUrl": "https://example.com/images/apple-juice.jpg"
       },
       {
-        "itemId": 9,
+        "itemId": 43,
         "name": "Ginger Ale",
         "description": "A refreshing ginger-flavored soda.",
         "price": 1.89,
@@ -73,7 +73,7 @@
         "imageUrl": "https://example.com/images/ginger-ale.jpg"
       },
       {
-        "itemId": 10,
+        "itemId": 44,
         "name": "Root Beer",
         "description": "A classic root beer soda.",
         "price": 1.99,
@@ -81,7 +81,7 @@
         "imageUrl": "https://example.com/images/root-beer.jpg"
       },
       {
-        "itemId": 11,
+        "itemId": 45,
         "name": "Energy Drink",
         "description": "A boost of energy in a can.",
         "price": 2.99,
@@ -89,7 +89,7 @@
         "imageUrl": "https://example.com/images/energy-drink.jpg"
       },
       {
-        "itemId": 12,
+        "itemId": 46,
         "name": "Sparkling Water",
         "description": "Refreshing sparkling mineral water.",
         "price": 1.49,
@@ -97,7 +97,7 @@
         "imageUrl": "https://example.com/images/sparkling-water.jpg"
       },
       {
-        "itemId": 13,
+        "itemId": 47,
         "name": "Milkshake",
         "description": "Creamy and delicious milkshake.",
         "price": 3.49,
@@ -105,7 +105,7 @@
         "imageUrl": "https://example.com/images/milkshake.jpg"
       },
       {
-        "itemId": 14,
+        "itemId": 48,
         "name": "Hot Chocolate",
         "description": "Rich and warm hot chocolate.",
         "price": 2.99,
@@ -113,7 +113,7 @@
         "imageUrl": "https://example.com/images/hot-chocolate.jpg"
       },
       {
-        "itemId": 15,
+        "itemId": 49,
         "name": "Frappuccino",
         "description": "Chilled coffee beverage blended with ice.",
         "price": 3.99,
@@ -121,7 +121,7 @@
         "imageUrl": "https://example.com/images/frappuccino.jpg"
       },
       {
-        "itemId": 16,
+        "itemId": 50,
         "name": "Smoothie",
         "description": "Healthy blended fruit smoothie.",
         "price": 3.49,
@@ -129,7 +129,7 @@
         "imageUrl": "https://example.com/images/smoothie.jpg"
       },
       {
-        "itemId": 17,
+        "itemId": 51,
         "name": "Chai Latte",
         "description": "Spiced tea blended with steamed milk.",
         "price": 2.99,
@@ -137,7 +137,7 @@
         "imageUrl": "https://example.com/images/chai-latte.jpg"
       },
       {
-        "itemId": 18,
+        "itemId": 52,
         "name": "Mango Lassi",
         "description": "Creamy yogurt drink with mango.",
         "price": 3.49,
@@ -145,7 +145,7 @@
         "imageUrl": "https://example.com/images/mango-lassi.jpg"
       },
       {
-        "itemId": 19,
+        "itemId": 53,
         "name": "Berry Smoothie",
         "description": "Mixed berry smoothie with yogurt.",
         "price": 3.99,
@@ -153,7 +153,7 @@
         "imageUrl": "https://example.com/images/berry-smoothie.jpg"
       },
       {
-        "itemId": 20,
+        "itemId": 54,
         "name": "Pineapple Juice",
         "description": "Refreshing pineapple juice.",
         "price": 2.99,
@@ -161,7 +161,7 @@
         "imageUrl": "https://example.com/images/pineapple-juice.jpg"
       },
       {
-        "itemId": 21,
+        "itemId": 55,
         "name": "Peach Iced Tea",
         "description": "Iced tea with a hint of peach.",
         "price": 2.49,
@@ -169,7 +169,7 @@
         "imageUrl": "https://example.com/images/peach-iced-tea.jpg"
       },
       {
-        "itemId": 22,
+        "itemId": 56,
         "name": "Black Tea",
         "description": "Classic brewed black tea.",
         "price": 1.99,
@@ -177,7 +177,7 @@
         "imageUrl": "https://example.com/images/black-tea.jpg"
       },
       {
-        "itemId": 23,
+        "itemId": 57,
         "name": "Coffee",
         "description": "Freshly brewed coffee.",
         "price": 2.49,
@@ -185,7 +185,7 @@
         "imageUrl": "https://example.com/images/coffee.jpg"
       },
       {
-        "itemId": 24,
+        "itemId": 58,
         "name": "Iced Coffee",
         "description": "Chilled coffee with ice.",
         "price": 2.99,
@@ -193,7 +193,7 @@
         "imageUrl": "https://example.com/images/iced-coffee.jpg"
       },
       {
-        "itemId": 25,
+        "itemId": 59,
         "name": "Coconut Water",
         "description": "Refreshing coconut water.",
         "price": 2.99,
