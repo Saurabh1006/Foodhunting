@@ -26,14 +26,14 @@ const desserts = () => {
         dispatch(addToCart(product)); // Dispatch the action to add to cart
 
             // Get the existing cart from localStorage or initialize an empty array
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  // const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   // Add the new product to the cart
-  cart.push(product);
+  // cart.push(product);
 
   // Save the updated cart back to localStorage
-  localStorage.setItem("cart", JSON.stringify(cart));
-        console.log(`${product.name} has been added to the cart!`);
+  // localStorage.setItem("cart", JSON.stringify(cart));
+  //       console.log(`${product.name} has been added to the cart!`);
       };
     
 

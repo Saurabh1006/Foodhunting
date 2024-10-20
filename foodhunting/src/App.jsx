@@ -10,6 +10,7 @@ import AllProductList from './component/Resturant/AllProductList';
 import ContactForm from './pages/ContactForm';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import OrderConfirmation from './pages/OrderConfirmation';
 function App() {
   return (
     <div>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/cart" element={<Cart />}/>
         <Route path="/contact_us" element={<ContactForm />}/>
         <Route path="/buy" element={<Checkout />}/>
+        <Route path="/confirmorder" element={<OrderConfirmation />}/>
       </Routes>
     </div>
   );

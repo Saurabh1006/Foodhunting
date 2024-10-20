@@ -11,11 +11,17 @@ import {
   FaChevronUp,
   FaTimes
 } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
+import { clearCart } from '../redux/cartSlice';
+import {NavLink, useNavigate} from 'react-router-dom';
 
 export default function Checkout() {
   const [showAllAddresses, setShowAllAddresses] = useState(false);
   const [showNewAddressForm, setShowNewAddressForm] = useState(false);
+  const [user, setUser] = useState(null);
+  const [isAddressSelected, setAddressSelected] = useState(0);
+  const dispatch = useDispatch();
+  
   const [newAddress, setNewAddress] = useState({
     name: '',
     phone: '',
@@ -31,9 +37,23 @@ export default function Checkout() {
   // Access cart items from Redux store
   const cart = useSelector((state) => state.cart);
 
+  console.log("cartdata"+cart);
+
   // Calculate total number of items and subtotal
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
   const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const navigate = useNavigate();
+
+    // // Extract all products from the cart
+    // const products = cart.map(item => ({
+    //   itemId: item.itemId,
+    //   name: item.name, // Assuming there's a name property
+    //   price: item.price,
+    //   quantity: item.quantity,
+    // }));
+  
+    // // Log the products
+    // console.log("Products in Cart:", products);
 
   // Dynamic Delivery Charge Calculation
   const calculateDeliveryCharges = (subtotal) => {
@@ -47,39 +67,72 @@ export default function Checkout() {
   };
 
   // Define additional charges (these can be dynamic based on your requirements)
-  const deliveryCharges = calculateDeliveryCharges(subtotal);
+  const deliveryCharges = subtotal;
+  console.log("deliveryCharges",deliveryCharges);
+
   const platformFee = 3; // Fixed platform fee
   const salesTax = subtotal * 0.08; // 8% sales tax
-  const grandTotal = (subtotal + deliveryCharges + platformFee + salesTax) * conversionRate;
+  console.log("salesTax",salesTax);
+  const grandTotal = (subtotal + deliveryCharges + platformFee + salesTax);
+  console.log("grandTotal",grandTotal);
 
   // Example savings calculation (customize as needed)
   const totalSavings = 2117; // You can make this dynamic based on discounts applied
 
   // Load addresses from localStorage and fetch conversion rate on component mount
   useEffect(() => {
+    // Retrieve stored user and addresses from localStorage
     const storedAddresses = localStorage.getItem('addresses');
-    if (storedAddresses) {
-      setAddresses(JSON.parse(storedAddresses));
+    const user = localStorage.getItem('user');
+    
+    if (user) {
+      // Parse the user JSON string to an object
+      const parsedUser = JSON.parse(user);
+      
+      console.log(parsedUser);
+  
+      // Check if the user has a valid access token
+      if (parsedUser.stsTokenManager && parsedUser.stsTokenManager.accessToken) {
+        // Set user state with the relevant data
+        setUser({
+          email: parsedUser.email,
+          phone: parsedUser.providerData[0].phoneNumber || "Not provided",
+        });
+  
+        // If addresses are stored, set the addresses state
+        if (storedAddresses) {
+          setAddresses(JSON.parse(storedAddresses));
+        }
+  
+        // Fetch the conversion rate from the API
+        fetch('https://api.exchangerate-api.com/v4/latest/USD') // Replace with your API URL
+          .then(response => response.json())
+          .then(data => {
+            console.log(data); // Log the entire response to inspect its structure
+            
+            if (data.rates && data.rates.INR) { // Check if rates and INR exist
+              setConversionRate(data.rates.INR); // Set INR conversion rate
+            } else {
+              console.error("INR conversion rate not found in the response");
+            }
+            setLoading(false); // Data fetched, loading can be turned off
+          })
+          .catch(error => {
+            console.error("Error fetching conversion rate:", error);
+            setLoading(false); // Turn off loading if there's an error
+          });
+      } else {
+        // If no access token, prompt user to login
+        console.log("first login karo be");
+        navigate('/login');
+      }
+    } else {
+      // If no user data, prompt user to login
+      console.log("first login karo be");
+      navigate('/login');
     }
-
-   // Fetch the conversion rate from the API
-   fetch('https://api.exchangerate-api.com/v4/latest/USD') // Replace with your API URL
-   .then(response => response.json())
-   .then(data => {
-     console.log(data); // Log the entire response to inspect its structure
-     if (data.rates && data.rates.INR) { // Check if rates and INR exist
-       setConversionRate(data.rates.INR); // Correctly access INR conversion rate
-     } else {
-       console.error("INR conversion rate not found in the response");
-     }
-     setLoading(false); // Set loading to false once the data is fetched
-   })
-   .catch(error => {
-     console.error("Error fetching conversion rate:", error);
-     setLoading(false);
-   });
-
   }, []);
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -103,6 +156,43 @@ export default function Checkout() {
     setShowNewAddressForm(false);
   };
 
+//  place the order 
+const handlePlaceOrder = () => {
+  if (isAddressSelected === null) {
+    alert("Please select a delivery address.");
+    return;
+  }
+
+  const selectedAddress = addresses[isAddressSelected];
+
+  // Create an order object to store in localStorage
+  const orderDetails = {
+    address: selectedAddress,
+    products: cart.map(item => ({
+      itemId: item.itemId,
+      name: item.name,
+      price: item.price,
+      quantity: item.quantity,
+    })), // Add products here
+    total: grandTotal,
+    subtotal, // Optionally include subtotal if needed
+    deliveryCharges: calculateDeliveryCharges(subtotal), // Include dynamic delivery charges
+    platformFee, // Include fixed platform fee
+    salesTax, // Include sales tax
+    totalSavings // Include any savings if applicable
+  };
+  // Save order details to localStorage
+  localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+
+  // Clear the cart in Redux state and localStorage
+  dispatch(clearCart()); // Dispatch clearCart to remove items from the cart
+  localStorage.removeItem('cart'); // Clear cart from localStorage
+
+  // Optionally navigate to an order confirmation page
+  navigate('/confirmorder'); // Change to your confirmation route
+};
+
+
   return (
     <div className="max-w-4xl mx-auto p-4 font-sans"
     
@@ -115,7 +205,7 @@ export default function Checkout() {
           <span className="text-xl font-bold text-blue-600">FoodHunting</span>
         </div>
         <nav>
-          <a href="#about" className="text-gray-600 hover:text-blue-600">About</a>
+          <NavLink to={'/about'} className="text-gray-600 hover:text-blue-600">About</NavLink>
         </nav>
       </header>
       {loading ? (
@@ -151,14 +241,21 @@ export default function Checkout() {
             <div className="bg-white p-4 rounded-lg shadow space-y-4">
               {addresses.slice(0, showAllAddresses ? addresses.length : 2).map((addr, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <input type="radio" name="address" className="mt-1" defaultChecked={index === 0} />
+                  
+                  <input 
+                  type="radio" 
+                  name="address" 
+                  className="mt-1" 
+                  checked={isAddressSelected === index} 
+                  onChange={() => setAddressSelected(index)} 
+                />
                   <div className="flex-grow">
                     <div className="flex justify-between">
                       <p className="font-semibold">{addr.name} <span className="text-gray-600">{addr.phone}</span></p>
                       {index === 0 && <button className="text-blue-600"><FaEdit /></button>}
                     </div>
                     <p className="text-sm text-gray-600">{addr.address}, {addr.city}, {addr.state} - {addr.pincode}</p>
-                    {index === 0 && (
+                    {isAddressSelected ===index && (
                       <button className="mt-2 bg-orange-500 text-white px-4 py-2 rounded">
                         DELIVER HERE
                       </button>
@@ -272,7 +369,7 @@ export default function Checkout() {
             <div className="mt-4">
               <p className="flex justify-between">
                 <span>Subtotal ({totalItems} items)</span>
-                <span>₹{(subtotal * conversionRate).toFixed(2)}</span>
+                <span>₹{(subtotal + deliveryCharges).toFixed(2)}</span>
               </p>
               <p className="flex justify-between">
                 <span>Delivery Charges</span>
@@ -291,6 +388,9 @@ export default function Checkout() {
                 <span>Grand Total</span>
                 <span>₹{grandTotal.toFixed(2)}</span>
               </p>
+              <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600" onClick={handlePlaceOrder}>
+    Place Order
+  </button>
             </div>
           </div>
         </div>
